@@ -6,7 +6,7 @@ function Login() {
   // 跳转到关于页面
   function goAbout() {
     // 3. 调用跳转函数，传入目标路径
-    navigate('/about')
+    navigate('/about', { replace: true })
   }
   return (
     <div>
