@@ -25,7 +25,8 @@ function App() {
         {/* <Route path="/about/:id" element={<About />}></Route> */}
         <Route path="/" element={<Layout />}>
           {/* 定义二级路由嵌套 */}
-          <Route path="board" element={<Board />}></Route>
+          {/* 默认二级路由，只需要添加index属性，把它自己的path去掉 */}
+          <Route index element={<Board />}></Route>
           <Route path="article" element={<Article />}></Route>
         </Route>
         <Route path="/login" element={<Login />}></Route>
