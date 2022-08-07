@@ -5,6 +5,7 @@ import Login from './Login'
 import Layout from "./Layout"
 import Board from "./Board"
 import Article from "./Article"
+import NotFound from './NotFound'
 
 // 导入路由依赖项
 import { HashRouter, BrowserRouter, Link, Routes, Route } from 'react-router-dom'
@@ -30,6 +31,8 @@ function App() {
           <Route path="article" element={<Article />}></Route>
         </Route>
         <Route path="/login" element={<Login />}></Route>
+        {/* 当所有的路径没有匹配时，做一个兜底匹配 */}
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </HashRouter>
   )
